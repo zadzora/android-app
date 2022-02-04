@@ -1,0 +1,54 @@
+--------------- README -----------------
+Krátka dokumentácia k modulom android aplikácii pre správu a zobrazovanie modelov v rošírenej realite.
+Bližšie informácie k jednotlivým funkciám a premenným sa nachádzajú priamo v kóde.
+
+Class
+----------------------------------------
+ArActivity.java
+    - Slúži na vytvorenie ArFragmentu a zobrazenie 3D modelov.
+    - Upravovanie parametrov modelov (scale, setparent, ...) sa uskutočnuje pomocou
+      funckie addModel.
+
+ArAdapter.java
+    - Adapter pre triedu ArActivity
+    - Zobrazujeme tu iba nahlad 3D modelu pomocou knižnice Picasso
+
+AvailableAdapter.java
+    - Adapter pre triedu ObjectActivity
+    - Zobrazuje náhľad, názov, Ikonu (Download) 3D modelov
+
+CheckNetwork.java
+    - Kontrola konektivity
+
+DBCategories.java
+    - Databáza kategórií
+
+DBModels.java
+    - Databáza stiahnutých modelov
+    - Slúži na zobrazovanie modelov v offline režime
+
+Categories.java / Downloaded.java
+    - dátové typy pre kategórie/modely
+    - oba (available/downloaded) typy modelov sú dátovym typom Downloaded
+
+DownloadedAdapter.java
+    - Adapter pre triedu ObjectActivity.
+    - Zobrazuje náhľad, názov, Ikonu (Show in AR) 3D modelov
+    - Správanie tejto triedy je podobný ako pri AvailableAdapter
+
+ListAdapter.java
+    - Adapter pre triedu MainActivity
+    - Zobrazuje názov, náhlad a počet modelov v kategórií
+
+MainActivity.java
+    - Main class, volá sa pri zapnutí aplikácie
+    - Načítavá údaje z URL adresy pričom vytvára aj token na autentifikáciu, bez ktorého by boli tieto dáta nedostupné
+    - Taktiež kontroluje pripojenie k internetu a na základe toho využíva online/offline režim
+    - Oba tieto funkcie používa asynchrónne (Async class)
+    - Bližšie info v kóde
+
+ObjectActivity.java
+    - Volá sa pri vojdení do kontrétnej kategórie
+    - Podľa categoryID načíva údaje z URL adresy a rovnako ako pri MainActivity, vytvára aj firebase token
+    - Popri Async funkciám na načítanie dát a kontrolu internetu, má aj async funkciu na sťahovanie modelov
+    - Bližšie info v kóde (viacero podobných častí ako pri MainActivity)

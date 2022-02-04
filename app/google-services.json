@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1010064525357",
+    "project_id": "arportal-1f20f",
+    "storage_bucket": "arportal-1f20f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1010064525357:android:afd1db864d159786a610a4",
+        "android_client_info": {
+          "package_name": "dtitss.arportal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1010064525357-rj9su7q3560ohrsnmpfnknnpb3gnoi4b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwfmb1CgiOmp_3NmStjfQ7XBTFLvTsEow"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1010064525357-rj9su7q3560ohrsnmpfnknnpb3gnoi4b.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1010064525357-jp4jmn2oriafe4v0i1smomu1mecs06s7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dtitss.arportal"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+    }
+}
+rootProject.name = "AR"
+include ':app'
+include ':sceneform'
+include ':sceneformux'
+
+project(':sceneformux').projectDir = new File('sceneformux/ux')
+
+project(':sceneform').projectDir = new File('sceneformsrc/sceneform')
